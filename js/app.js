@@ -27,6 +27,12 @@ signInForm.addEventListener('submit', function(e) {
     e.preventDefault();
 });
 
+document.addEventListener('click', (e) => {
+    if(e.target === loginModal) {
+        loginModal.style.display = 'none';
+    }
+});
+
 questions.forEach((question) => {
     question.addEventListener('click', function() {
         this.classList.toggle('show-answer');
@@ -40,3 +46,5 @@ questions.forEach((question) => {
         }
     });
 });
+
+// Sign up form page
