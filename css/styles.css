@@ -493,8 +493,15 @@ input[type="password"] {
 .movie-trailer {
     width: 100%;
     margin-top: 25px;
-    height: 240px;
+    margin-bottom: 25px;
+    height: 290px;
     border: 1px solid #fff;
+}
+.movie-login-btn {
+    background: var(--primary-red);
+    padding: 10px 15px;
+    color: #fff;
+    border-radius: 5px;
 }
 #review-input {
     width: 75%;
@@ -620,6 +627,9 @@ input[type="password"] {
 }
 .movie-block {
     height: 240px;
+}
+.movie-trailer {
+    height: 190px;
 }
 .offline-section {
     padding: 25px 15px 35px 15px;

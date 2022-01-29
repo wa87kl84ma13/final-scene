@@ -7,7 +7,6 @@ const movies = [
         score: 4.8,
         release: 2008,
         director: 'Christopher Nolan',
-        review: '<input type="text" id="review-input" placeholder="Leave a comment"><button id="comment-submit">Submit</button>',
         overview: 'When the menace known as the Joker wreaks havoc and chaos on the people of Gotham, Batman must accept one of the greatest psychological and physical tests of his ability to fight injustice.',
         trailer: 'https://www.youtube.com/embed/LDG9bisJEaI'
     },
@@ -18,9 +17,9 @@ const movies = [
         category: 'Movies',
         score: 5.0,
         release: 1990,
-        director: '',
-        overview: '',
-        trailer: ''
+        director: 'Martin Scorsese',
+        overview: 'In 1955, youngster Henry Hill becomes enamored of the criminal life and Mafia presence in his working class Italian-American neighborhood in Brooklyn.',
+        trailer: 'https://www.youtube.com/embed/2ilzidi_J8Q'
     },
     {
         title: 'After Life',
@@ -30,8 +29,8 @@ const movies = [
         score: 4.4,
         release: 2019,
         director: 'Ricky Gervais',
-        overview: '',
-        trailer: ''
+        overview: 'After Life is a British black comedy-drama streaming television series created, written, produced, and directed by Ricky Gervais, who plays lead character Tony Johnson.',
+        trailer: 'https://www.youtube.com/embed/eIGGKSHMQOM'
     },
     {
         title: 'A Quiet Place Part II',
@@ -40,9 +39,9 @@ const movies = [
         category: 'Movies',
         score: 4.2,
         release: 2021,
-        director: '',
-        overview: '',
-        trailer: ''
+        director: 'John Krasinski',
+        overview: 'During a little league game, the Abbott family wife Evelyn, husband Lee, deaf daughter Regan, and sons Marcus and Beau and other spectators witness a strange asteroid-like object hurtle towards the Earth.',
+        trailer: 'https://www.youtube.com/embed/BpdDN9d9Jio'
     },
     {
         title: 'Venom',
@@ -51,9 +50,9 @@ const movies = [
         category: 'Movies',
         score: 2.4,
         release: 2018,
-        director: '',
-        overview: '',
-        trailer: ''
+        director: 'Ruben Fleischer',
+        overview: 'While exploring space for new habitable worlds, a probe belonging to the bio-engineering corporation Life Foundation discovers a comet covered in symbiotic lifeforms.',
+        trailer: 'https://www.youtube.com/embed/u9Mv98Gr5pY'
     },
     {
         title: 'Tenet',
@@ -62,9 +61,9 @@ const movies = [
         category: 'Movies',
         score: 2.9,
         release: 2020,
-        director: '',
-        overview: '',
-        trailer: ''
+        director: 'Christopher Nolan',
+        overview: 'A CIA agent, the "Protagonist", participates in an extraction operation at the Kyiv opera house. After seizing an artifact, the Protagonist is captured by mercenaries.',
+        trailer: 'https://www.youtube.com/embed/L3pk_TBkihU'
     },
     {
         title: 'The Godfather',
@@ -73,20 +72,20 @@ const movies = [
         category: 'Movies',
         score: 5.0,
         release: 1972,
-        director: '',
-        overview: '',
-        trailer: ''
+        director: 'Francis Ford Coppola',
+        overview: 'In 1945 New York City, at his daughter Connie\'s wedding to Carlo, Vito Corleone, the Don of the Corleone crime family listens to requests. His youngest son, Michael, who was a Marine during World War II, introduces his girlfriend, Kay Adams, to his family at the reception.',
+        trailer: 'https://www.youtube.com/embed/sY1S34973zA'
     },
     {
-        title: 'The Godfather II',
+        title: 'The Godfather Part II',
         image: 'img/godfather-2.jpg',
         genre: 'Crime',
         category: 'Movies',
         score: 5.0,
         release: 1974,
-        director: '',
-        overview: '',
-        trailer: ''
+        director: 'Francis Ford Coppola',
+        overview: 'The Godfather Part II is a 1974 American epic crime film produced and directed by Francis Ford Coppola from the screenplay co-written with Mario Puzo, starring Al Pacino, Robert Duvall, Diane Keaton, Robert De Niro, Talia Shire, Morgana King, John Cazale, Mariana Hill, and Lee Strasberg. It is the second installment in The Godfather trilogy.',
+        trailer: 'https://www.youtube.com/embed/9O1Iy9od7-A'
     },
     {
         title: 'Scarface',
@@ -95,9 +94,9 @@ const movies = [
         category: 'Movies',
         score: 5.0,
         release: 1983,
-        director: '',
-        overview: '',
-        trailer: ''
+        director: 'Brian De Palma',
+        overview: 'In 1980, Cuban refugee and ex-convict Tony Montana arrives in Miami, Florida, as part of the Mariel boatlift, where he is sent to a refugee camp with friends Manny Ray, Angel, and Chi Chi.',
+        trailer: 'https://www.youtube.com/embed/cv276Wg3e7I'
     },
 ];
 
@@ -153,7 +152,7 @@ movies.forEach((movie) => {
     movieHeading.textContent = `${movie.title}`;
     // Movie director
     const movieDirector = document.createElement('p');
-    movieDirector.textContent = `${movie.director}`;
+    movieDirector.textContent = `Director: ${movie.director}`;
     // Movie overview
     const movieOverview = document.createElement('p');
     movieOverview.classList.add('movie-overview');
@@ -162,7 +161,11 @@ movies.forEach((movie) => {
     const movieTrailer = document.createElement('iframe');
     movieTrailer.classList.add('movie-trailer');
     movieTrailer.src = `${movie.trailer}`;
-    movieText.append(movieHeading, movieDirector, movieOverview, movieTrailer);
+    // Sign in button
+    const movieLoginBtn = document.createElement('a');
+    movieLoginBtn.classList.add('movie-login-btn');
+    movieLoginBtn.textContent = 'Sign in to watch';
+    movieText.append(movieHeading, movieDirector, movieOverview, movieTrailer, movieLoginBtn);
     // Append to movie info container
     movieInfoContainer.append(movieImageContainer, movieText);
     // Append to movie info
@@ -170,46 +173,6 @@ movies.forEach((movie) => {
     // Append all to movie container
     movieContainer.append(movieBlock, movieInfo);
 });
-// movies.forEach((movie) => {
-//     movieContainer.innerHTML += 
-//         `<div class="movie-shows-block">
-//             <img src="${movie.image}" alt="">
-//             <span class="movie-show-score">${movie.score.toFixed(1)}</span>
-//             <h4>${movie.title}</h4>
-//         </div>
-//         <div class="movie-info-content">
-//         <div class="close-movie-modal">+</div>
-//             <div class="movie-info-container">
-//             <div class="movie-image">
-//               <img src="${movie.image}" alt="">
-//               <h3><span class="release-span-text">Release date:</span> ${movie.release}</h3>
-//             </div>
-//             <div class="movie-info">
-//               <h2>${movie.title}</h2>
-//               <p>Director: ${movie.director}</p>
-//               <p class="movie-overview">${movie.overview}</p>
-//               ${movie.trailer}
-//               <h4 class="review-heading">Comments</h4>
-//               ${movie.review}
-//               <div id="comments-container"></div>
-//             </div>
-//             </div>
-//         </div>`;
-// });
-
-// const commentInput = document.getElementById('review-input');
-// const commentSubmit = document.getElementById('comment-submit');
-// const commentsContainer = document.getElementById('comments-container');
-
-// function addComment() {
-//     let comment = document.createElement('p');
-//     comment.className = 'review-text';
-//     comment.append(commentInput.value);
-//     commentsContainer.appendChild(comment);
-//     commentInput.value = '';
-// }
-
-// commentSubmit.addEventListener('click', addComment);
 
 const moviesBlock = document.querySelectorAll('.movie-shows-block');
 const closeMovieModal = document.querySelectorAll('.close-movie-modal');
@@ -241,5 +204,14 @@ scores.forEach((score) => {
         score.style.color = 'orange';
     } else {
         score.style.color = 'springgreen';
+    }
+});
+
+document.addEventListener('click', (e) => {
+    if(e.target === movieModal) {
+        movieInfo.forEach(info => {
+            info.classList.remove('show-movie-content');
+        });
+        movieModal.style.display = 'none';
     }
 });
