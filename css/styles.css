@@ -481,16 +481,14 @@ input[type="password"] {
 }
 .movie-info-content {
     position: fixed;
-    top: 15%;
-    width: 70%;
-    background: #000;
+    top: 0;
+    width: 75%;
+    background: #fff;
     padding: 30px;
-    left: 15%;
-    color: #fff;
+    right: -100%;
+    color: #000;
     z-index: 10;
-    display: none;
-    overflow-x: hidden;
-    height: calc(100% - 220px);
+    height: 100%;
 }
 .movie-trailer {
     width: 100%;
@@ -539,10 +537,11 @@ input[type="password"] {
 }
 .release-span-text {
     font-weight: 400;
-    color: #fff;
+    color: #000;
 }
 .show-movie-content {
-    display: block;
+    right: 0;
+    transition: ease 0.4s;
 }
 .close-movie-modal {
     position: absolute;
@@ -669,8 +668,12 @@ input[type="password"] {
     width: 48%;
 }
 .movie-info-content {
-    width: 80%;
-    left: 2.5%;
+    overflow-x: hidden;
+    padding-bottom: 25px;
+    height: calc(95% - 10px);
+}
+.movie-image {
+    margin-top: 30px;
 }
 .movie-info-container {
     display: block;
