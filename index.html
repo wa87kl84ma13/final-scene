@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FinalScene - Movies and TV Shows Streaming Service</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@200;400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+    <div id="login-modal">
+        <div class="modal-content">
+            <div id="close-modal">+</div>
+            <h4>Sign in to your account.</h4>
+            <div id="error-message"></div>
+            <div id="welcome-message"></div>
+            <form action="#" id="sign-in-form">
+                <input type="email" name="email" id="email" placeholder="Email:">
+                <input type="password" name="password" id="password" placeholder="Password:">
+                <button type="submit" id="sign-in-btn">Sign In</button>
+            </form>
+            <p class="account-text">Don't have an account? <span class="trial-text">Start your free trial.</span></p>
+        </div>
+    </div>
+    <header class="main-header">
+        <div class="container">
+            <nav class="logo-section">
+                <button class="login-btn" id="login-btn">Log In</button>
+            </nav>
+            <div class="header-content">
+                <div class="logo-container">
+                    <h3><span class="scene-text"><i class="fas fa-film"></i>Final</span>Scene</h3>
+                </div>
+                <h1>Movies & shows you love. Any device. Anywhere.</h1>
+                <a href="sign-up.html" class="sign-up-banner-btn">Sign Up</a>
+            </div>
+        </div>
+    </header>
+    <section class="movies">
+        <div class="container">
+            <h2><span class="classics-text">Classics</span> to New Releases.</h2>
+            <h3>Stream all your favourite movies and TV shows in 4K*. Cancel anytime. No questions asked.</h3>
+            <div class="movies-container">
+                <div class="movie-block">
+                    <img src="img/dark-knight-cover.jpg" alt="">
+                    <h4>The Dark Knight</h4>
+                </div>
+                <div class="movie-block">
+                    <img src="img/after-life.jpg" alt="">
+                </div>
+                <div class="movie-block">
+                    <img src="img/quiet-place2.jpg" alt="">
+                </div>
+                <div class="movie-block">
+                    <img src="img/godfather.jpg" alt="">
+                </div>
+            </div>
+            <a href="all-movies-show.html" class="all-content">See All</a>
+            <p class="streaming-terms">*Streaming movies and TV shows in 4K only possible with compatible 4K TV's.</p>
+        </div>
+    </section>
+    <section class="offline-section">
+        <div class="container">
+            <h2>Watch All Your Favourites Offline.</h2>
+            <h3>No Internet Connection? No Problem.</h3>
+            <p class="offline-text">Download all your movies and TV shows to any of your devices. Brilliant content on any of your devices anywhere you like.</p>
+            <p class="offline-text">Sound good? Select a plan below that suits you.</p>
+        </div>
+    </section>
+    <section class="select-plan" id="plans">
+        <div class="container">
+            <h2>Select Your Plan.</h2>
+            <h4>Switch your plan and cancel anytime.</h4>
+            <div class="plans-card-container">
+                <div class="plan-card">
+                    <h4>Standard Plan</h4>
+                    <span class="price-plan"><span class="price">£5.99</span> a month</span>
+                    <ul class="plan-list">
+                        <li>Stream in 4K</li>
+                        <li>Watch videos offline</li>
+                        <li>Cancel at any time</li>
+                        <li>Watch unlimited movies and TV shows</li>
+                        <li>Watch on 2 screens at the same time</li>
+                        <li>14 days free trial <br><span class="trail-ends-text">(first payment when trial ends)</span></li>
+                    </ul>
+                    <button class="plan-btn">Select Plan</button>
+                </div>
+                <div class="plan-card popular-card">
+                    <span class="plan-tag">Most Popular</span>
+                    <h4>Family Plan</h4>
+                    <span class="price-plan"><span class="price">£7.99</span> a month</span>
+                    <ul class="plan-list">
+                        <li>Stream in 4K</li>
+                        <li>Watch videos offline</li>
+                        <li>Cancel at any time</li>
+                        <li>Watch unlimited movies and TV shows</li>
+                        <li>Watch on 5 screens at the same time</li>
+                        <li>30 days free trial <br><span class="trail-ends-text">(first payment when trial ends)</span></li>
+                    </ul>
+                    <button class="plan-btn">Select Plan</button>
+                </div>
+                <div class="plan-card">
+                    <h4>Premium Plan</h4>
+                    <span class="price-plan"><span class="price">£10.99</span> a month</span>
+                    <ul class="plan-list">
+                        <li>Stream in 4K</li>
+                        <li>Watch videos offline</li>
+                        <li>Cancel at any time</li>
+                        <li>Watch unlimited movies and TV shows</li>
+                        <li>Watch on unlimited screens at the same time</li>
+                        <li>60 days free trial <br><span class="trail-ends-text">(first payment when trial ends)</span></li>
+                    </ul>
+                    <button class="plan-btn">Select Plan</button>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="questions-section">
+        <div class="container">
+            <h2>Frequently Asked Questions</h2>
+            <div class="questions-container">
+                <div class="question">
+                    <h4>Can I cancel my subscription?</h4>
+                    <span class="question-plus">+</span>
+                </div>
+                <div class="answer">
+                    <p>Yes, of course. You can cancel your subscription at any time, no questions asked. 
+                    Just log in to your account and select Manage Subscription.</p>
+                </div>
+                <div class="question">
+                    <h4>Will I be charged when my trial ends?</h4>
+                    <span class="question-plus">+</span>
+                </div>
+                <div class="answer">
+                    <p>You will only be charged if you choose to continue your subscription when your trial ends. 
+                    No credit/debit is required to sign up.</p>
+                </div>
+                <div class="question">
+                    <h4>Where can I watch?</h4>
+                    <span class="question-plus">+</span>
+                </div>
+                <div class="answer">
+                    <p>You can watch any of your favourite movies and TV shows any of your devices. You can sign in to your account on your 
+                    personal computer and watch on a web browser or download our app to any of your devices with an internet connection such as: 
+                    TV, mobile phone, tablet or video game consoles.</p><br>
+                    <p>You can also download for offline viewing and watch anywhere without an internet connection.</p>
+                </div>
+                <div class="question">
+                    <h4>How much does FinalScene cost?</h4>
+                    <span class="question-plus">+</span>
+                </div>
+                <div class="answer">
+                    <p>We have 3 plans to choose from to suit your needs starting from £5.99 a month.</p><br>
+                    <p>See our <a href="index.html#plans" class="plans-link">plans</a> for more info</p>
+                </div>
+            </div>
+        </div>
+    </section>
+    <footer class="main-footer">
+        <div class="container">
+            <p>&copy; Copyright FinalScene 2022</p>
+        </div>
+    </footer>
+<script src="js/app.js"></script>
+</body>
+</html>
