@@ -20,8 +20,8 @@
             </div>
             <nav class="main-nav">
                 <ul>
-                    <li>Plans</li>
-                    <li>Log In</li>
+                    <li><a href="all-movies-show.html">Movies & Shows</a></li>
+                    <li><a href="index.html#plans">Plans</a></li>
                 </ul>
             </nav>
         </div>
@@ -32,17 +32,29 @@
         <div class="container">
             <h1>Create an account.</h1>
             <form action="#" id="sign-up-form">
-                <div class="error-message"></div>
-                <label for="first-name">Name:</label>
-                <input type="text" name="name" id="name">
-                <label for="email">Email:</label>
-                <input type="email" name="email" id="email">
-                <label for="password">Password:</label>
-                <input type="password" name="password" id="password">
-                <label for="confirm-password">Confirm Password:</label>
-                <input type="password" name="confirm-password" id="confirm-password">
+                <div class="form-control">
+                    <label for="name">Username:</label>
+                    <input type="text" name="Username" id="name">
+                    <small>This field is required</small>
+                </div>
+                <div class="form-control">
+                    <label for="email">Email:</label>
+                    <input type="email" name="Email" id="email">
+                    <small>This field is required</small>
+                </div>
+                <div class="form-control">
+                    <label for="password">Password:</label>
+                    <input type="password" name="Password" id="password">
+                    <small>This field is required</small>
+                </div>
+                <div class="form-control">
+                    <label for="confirm-password">Confirm Password:</label>
+                    <input type="password" name="Confirm password" id="confirm-password">
+                    <small>This field is required</small>
+                </div>
                 <button type="submit" class="sign-form-button">Sign Up</button>
             </form>
+            <p class="sign-in-text">Already have an account? <a href="login-page.html">Sign in to your account</a></p>
         </div>
     </section>
     

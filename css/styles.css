@@ -39,6 +39,9 @@ a {
     font-size: 14px;
     font-weight: 600;
 }
+.main-nav li a {
+    color: #000;
+}
 .main-header {
     background-image: url('../img/batman-banner.jpg');
     height: 75vh;
@@ -86,7 +89,10 @@ a {
 .error-message,
 .plans-link,
 .plan-list li::before,
-.movie-image h3  {
+.movie-image h3,
+.main-nav li a:hover,
+.sign-in-text a,
+.form-control small  {
     color: var(--primary-red);
 }
 .sign-up-banner-btn,
@@ -570,20 +576,21 @@ input[type="password"] {
     text-align: left;
     padding: 30px;
 }
+.form-control {
+    margin-bottom: 15px;
+}
 label {
     display: block;
     font-weight: 600;
     font-size: 16px;
     padding-bottom: 5px;
 }
-#sign-up-form input[type="text"],
-#sign-up-form input[type="email"],
-#sign-up-form input[type="password"] {
+.form-control input {
     width: 94%;
     padding: 15px;
-    margin-bottom: 18px;
     border: 1px solid #a6a6a6;
     border-radius: 4px;
+    margin-bottom: 0;
 }
 .sign-form-button {
     padding: 14px;
@@ -594,8 +601,20 @@ label {
     border: none;
     margin: 10px auto;
 }
-.error-message {
-    padding-bottom: 15px;
+.sign-in-text {
+    padding-top: 20px;
+}
+.form-control.error input {
+    border: 1px solid var(--primary-red);
+}
+.form-control.success input {
+    border: 1px solid #589140;
+}
+.form-control small {
+    display: none;
+}
+.form-control.error small {
+    display: block;
 }
 @media (max-width: 660px) {
 .main-header {
@@ -640,6 +659,7 @@ label {
     -ms-overflow-style: none; /* for Internet Explorer, Edge */
     scrollbar-width: none; /* for Firefox */
     overflow-x: scroll; 
+    overflow-y: hidden;
 }
 .movies-container::-webkit-scrollbar {
     display: none; /* for Chrome, Safari, and Opera */
@@ -675,7 +695,7 @@ label {
     padding: 30px 15px;
 }
 .question h4 {
-    font-size: 16px;
+    font-size: 14px;
 }
 .questions-section h2 {
     font-size: 32px;

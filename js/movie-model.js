@@ -163,6 +163,7 @@ movies.forEach((movie) => {
     movieTrailer.src = `${movie.trailer}`;
     // Sign in button
     const movieLoginBtn = document.createElement('a');
+    movieLoginBtn.href = 'login-page.html';
     movieLoginBtn.classList.add('movie-login-btn');
     movieLoginBtn.textContent = 'Sign in to watch';
     movieText.append(movieHeading, movieDirector, movieOverview, movieTrailer, movieLoginBtn);
