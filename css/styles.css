@@ -638,6 +638,9 @@ label {
     left: 2.5%;
     top: 20%;
 }
+.all-movies-shows {
+    padding: 35px 15px;
+}
 .movies h2 {
     font-size: 34px;
     line-height: 1;
@@ -731,6 +734,9 @@ label {
 }
 .movie-info {
     margin-left: 0;
+}
+.form-section {
+    padding: 50px 10px;
 }
 .form-section h1 {
     font-size: 28px;
