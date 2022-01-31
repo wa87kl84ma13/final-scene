@@ -48,6 +48,7 @@ a {
     background-repeat: no-repeat;
     background-position: center top;
     position: relative;
+    background-size: cover;
 }
 .main-header:before {
     content: '';
